@@ -73,3 +73,18 @@ HOW TO UNZIP?
 
 NOTE: One code can never be the start of another code
 e.g. If F = 110 => 1100 = NULL
+
+The pair choices are based on frequency:
+
+1. Put every distinct letter in a priority queue, ordered by its count.
+
+  (A:3  N:2  B:1)
+
+2. Remove the two nodes with the smallest counts (B, N) and join them under a new parent. The parent’s count is their sum.
+3. Put that parent back in the queue.
+
+  (A:3  BN:3)
+
+4. Repeat until only one node remains.
+
+  (ABN:6)
